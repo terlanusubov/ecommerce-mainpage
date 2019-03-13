@@ -121,7 +121,17 @@
                         <span></span>
                         </span>
                     </div>
-                    <nav class="col-xl-9 navigation">
+                    <!-- <div class="mobile-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Men's wear</a></li>
+                            <li><a href="#">Women's wear</a></li>
+                            <li><a href="#">Short codes</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div> -->
+                    <nav class="col-xl-9 navigation mobile">
                         <ul>
                             <li><a href="#">Home
                                     <span class="menu-line"></span>
@@ -164,6 +174,33 @@
                                         </div>
                                     </div>
                                 </ul>
+                                <ul class="dropdown-list-mobile">
+                                    <div class="col-12 dropdown-list-item">
+                                        <a href="#"> <img src="img/top2.jpg" alt="clock"></a>
+                                    </div>
+                                    <div class="col-12 dropdown-list-item">
+                                        <ul>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Wallets</a></li>
+                                            <li><a href="#">Footwear</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                            <li><a href="#">Bags</a></li>
+                                            <li><a href="#">Caps & Hats</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 dropdown-list-item">
+                                        <ul>
+                                            <li><a href="#">Jwellery</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                            <li><a href="#">Perfumes</a></li>
+                                            <li><a href="#">Beauty</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                            <li><a href="#">Sweamwear</a></li>
+                                        </ul>
+                                    </div>
+                                </ul>
                             </li>
                             <li class="dropdownable"><a href="#">Women's wear
                                     <i class="fas fa-caret-down"></i>
@@ -198,11 +235,37 @@
                                         </div>
                                     </div>
                                 </ul>
+                                <ul class="dropdown-list-mobile">
+                                    <div class="col-12 dropdown-list-item">
+                                        <ul>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Wallets</a></li>
+                                            <li><a href="#">Footwear</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                            <li><a href="#">Bags</a></li>
+                                            <li><a href="#">Caps & Hats</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 dropdown-list-item">
+                                        <ul>
+                                            <li><a href="#">Jwellery</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                            <li><a href="#">Perfumes</a></li>
+                                            <li><a href="#">Beauty</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                            <li><a href="#">Sweamwear</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 dropdown-list-item">
+                                        <a href="#"> <img src="img/top1.jpg" alt="clock"></a>
+                                    </div>
+                                </ul>
                             </li>
                             <li class="dropdownable"><a href="#">Short codes
                                     <i class="fas fa-caret-down"></i>
                                     <span class="menu-line"></span>
-
                                 </a>
                             </li>
                             <li><a href="#">Contact
@@ -224,6 +287,33 @@
             </div>
         </div>
     </header>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            myForEach(".nav-wrapper nav > ul > .dropdownable a", function (button) {
+                myEvent(button, "click", function (e) {
+                    var parent = e.target.parentElement.parentElement.parentElement;
+                    e.preventDefault();
+                    var isMobile = false;
+                    if (window.innerWidth <= 768) {
+                        isMobile = true;
+                    }
+                    var currentButton = this;
+                    myDropDown(currentButton, (element) => isMobile ? element.nextElementSibling.nextElementSibling : element.nextElementSibling, function (element) {
+                        myToggleClass(element, "active");
+                        myToggleClass(currentButton.querySelector(".menu-line"), "active")
+                    })
+                })
+            })
+
+            myEvent(document.querySelector(".hamburger-menu"), "click", function () {
+                myToggleClass(document.querySelector(".mobile"),"active")
+            })      
+        })    
+    </script>
 </body>
+
 </html>

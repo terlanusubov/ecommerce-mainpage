@@ -251,6 +251,7 @@ ul{
 }
 .hamburger-menu{
     width: 40px;
+    z-index:10;
     height: 35px;
     border:1px solid #ddd;
     padding: 10px;
@@ -290,7 +291,6 @@ ul{
 .hamburger-menu span::before{
     top:-6px;
 }
-
 /* Dropdown */
 .dropdownable{
     position: relative;
@@ -308,6 +308,15 @@ ul{
     border-radius: 4px;
     border:1px solid rgba(0, 0, 0, .15);
     box-shadow:  0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-list.active{
+    display: block;
+}
+.mobile .dropdown-list-mobile{
+    display: none;
+}
+.mobile .dropdown-list-mobile.active{
+    display: block;
 }
 .dropdown-list-item img{
     width:100%;
