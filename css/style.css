@@ -14,23 +14,32 @@ li{
 a:hover{
     text-decoration: none;
 }
-.clear{
-    clear: both;
-}
-.my-container{
-    width:90%;
-    margin:auto;
-}
-.nav-container{
-    width: 90%;
-    margin:auto;
-}
 p{
     margin:0;
 }
 ul{
     margin:0;
 }
+
+
+/* My Custom Classes */
+
+
+.my-container{
+    width:90%;
+    margin:auto;
+}
+
+/* Only for navigation */
+.nav-container{
+    width: 90%;
+    margin:auto;
+}
+.clear{
+    clear: both;
+}
+/* End My Custom Classes */
+
 /* End My Defaults */
 
 /* Home Page */
@@ -178,23 +187,24 @@ ul{
 /* Navigation */
 .nav-wrapper{
     background: #000;
-}
-.nav-wrapper nav>ul>li{
-    float: left;
-    padding:26px 16px;
     position: relative;
-    overflow: hidden;
-    margin:0px 5px;
-   
 }
-.nav-wrapper nav>ul>li a{
+.nav-wrapper nav > ul > li{
+    float: left;
+    position: relative;
+    margin:0px 5px;
+}
+.nav-wrapper nav > ul > li > a{
     font-size: 16px;
     color:#e7e7e7;
     letter-spacing: 1px;
     display: inline-block;
+    padding:26px 16px;
+    overflow: hidden;
+    vertical-align: top;
     position: relative;
 }
-.nav-wrapper nav>ul>li i{
+.nav-wrapper nav > ul > li i{
     vertical-align: middle;
     color:#e7e7e7;
     font-size: 0.8em;
@@ -202,15 +212,112 @@ ul{
 }
 .nav-wrapper .menu-line{
     position: absolute;
-    bottom: 0;
+    bottom:0;
     left:-102%;
     width:100%;
     height: 5px;
     background: #2fdab8;
     transition: all 0.4s ease-in-out;
     transition-delay:0.2s; 
+    overflow: hidden;
 }
-.nav-wrapper nav > ul > li:hover .menu-line{
+.nav-wrapper nav > ul > li > a:hover .menu-line{
     transition: all 0.4s ease-in-out;
     left:0;
+}
+.menu-line.active{
+    left:0;
+}
+.basket-wrapper .basket{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fdab8;
+}
+.basket-wrapper .basket span{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #17c3a2;
+}
+.basket-wrapper i{
+    color:black;
+}
+.hamburger-menu{
+    width: 40px;
+    height: 35px;
+    border:1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:5%;
+    cursor: pointer;
+    display: none;
+
+}
+.hamburger-menu span{
+    width: 19px;
+    height: 1px;
+    background: #888;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+}
+.hamburger-menu span::after,
+.hamburger-menu span::before{
+    content: "";
+    width: 20px;
+    height:1px;
+    background: #888;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+.hamburger-menu span::after{
+    top:6px;
+}
+.hamburger-menu span::before{
+    top:-6px;
+}
+
+/* Dropdown */
+.dropdownable{
+    position: relative;
+}
+.dropdown-list{
+    position: absolute;
+    top:100%;
+    left:0;
+    display: none;
+    min-width: 700px;
+    z-index: 1000;
+    padding: 20px 15px;
+    margin: 2px 0 0;
+    background-color: #fff;
+    border-radius: 4px;
+    border:1px solid rgba(0, 0, 0, .15);
+    box-shadow:  0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-list-item img{
+    width:100%;
+    box-shadow: 0px 0px 7px 0px #AFAFAF;
+}
+.dropdown-list-item a{
+    font-size: 0.8em;
+    color: #545454;
+    letter-spacing: 1px;
+}
+.dropdown-list-item li{
+    padding: 7px 5px;
 }
