@@ -1,0 +1,7 @@
+.slide-item{
+    width: 100%;
+    display: none;
+}
+.slide-item.active{
+    display:block;
+}
