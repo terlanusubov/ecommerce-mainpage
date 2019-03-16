@@ -19,9 +19,19 @@
         padding-left: 20px;
     }
 
-    /* .nav-wrapper nav > ul > li > a{
+    .nav-wrapper nav > ul > li > a{
         padding: 26px 5px;
-    } */
+    }
+    .dropdown-list{
+        min-width: 400px;
+    }
+    .dropdown-list-item a{
+        font-size: 0.7em;
+    }
+    .dropdown-list-item li{
+        padding: 5px 5px;
+    }
+
 }
 @media screen and (max-width:1200px){
     .header-bottom .logo.header-bottom-item h1 a{

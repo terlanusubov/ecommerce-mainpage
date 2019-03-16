@@ -1,45 +1,20 @@
-function myAddClass(selector, className) {
-    selector.classList.add(className);
-}
-function myRemoveClass(selector, className) {
-    selector.classList.remove(className);
-}
-function myToggleClass(selector, className) {
-    if (selector.classList.contains(className)) {
-        myRemoveClass(selector, className);
-    } else {
-        myAddClass(selector, className);
-    }
-}
-function myDropDown(clickedElement, dropElementCallback, callback) {
-    var dropDownElement = dropElementCallback(clickedElement);
-    if (dropDownElement != null) {
-        callback(dropDownElement)
-    }
-}
-function myGetElements(selector) {
-    return document.querySelectorAll(selector);
-}
-function myForEach(selector, callback) {
-    var elements = myGetElements(selector);
-    for (var element of elements) {
-        callback(element);
-    }
-}
-function myEvent(selector,event,callback){
-    if(typeof selector == "string"){
-        return document.querySelector(selector).addEventListener(event,callback);
-    }
-    else{
-        selector.addEventListener(event,callback);
-    }
-}
-function myHasClass(selector,className){
-    if(selector.classList.contains(className)){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-
+document.addEventListener("DOMContentLoaded", function () {
+    myForEach(".nav-wrapper nav > ul > .dropdownable a", function (button) {
+        myEvent(button, "click", function (e) {
+            var parent = e.target.parentElement.parentElement.parentElement;
+            e.preventDefault();
+            var isMobile = false;
+            if (window.innerWidth <= 768) {
+                isMobile = true;
+            }
+            var currentButton = this;
+            myDropDown(currentButton, (element) => isMobile ? element.nextElementSibling.nextElementSibling : element.nextElementSibling, function (element) {
+                myToggleClass(element, "active");
+                myToggleClass(currentButton.querySelector(".menu-line"), "active")
+            })
+        })
+    })
+    myEvent(document.querySelector(".hamburger-menu"), "click", function () {
+        myToggleClass(document.querySelector(".mobile"), "active")
+    })
+})   

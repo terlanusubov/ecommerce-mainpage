@@ -18,7 +18,7 @@
 
 <body>
     <!-- Start Project -->
-    <!-- Header -->
+    <!--Start Header -->
     <header class="site-header-wrapper">
         <!-- Top Header -->
         <div class="header-top">
@@ -121,16 +121,7 @@
                         <span></span>
                         </span>
                     </div>
-                    <!-- <div class="mobile-nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Men's wear</a></li>
-                            <li><a href="#">Women's wear</a></li>
-                            <li><a href="#">Short codes</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div> -->
+                    <!-- Navigation -->
                     <nav class="col-xl-9 navigation mobile">
                         <ul>
                             <li><a href="#">Home
@@ -287,33 +278,48 @@
             </div>
         </div>
     </header>
+
+    <!-- End Header -->
+    <!-- Main Start -->
+
+    <main>
+        <section class="slider-wrapper slider1"
+            style=" background-image: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)) , url('img/banner1.jpg')">
+            <div class="container">
+                <div class="content">
+                    <div class="title col-12">
+                        <h3>
+                            THE BIGGEST <span>SALE</span>
+                        </h3>
+                    </div>
+                    <div class="text col-12">
+                        <p>Special for today</p>
+                    </div>
+                    <div class="button col-12">
+                        <button>
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-icons">
+                <i class="fas fa-chevron-right right-icon"></i>
+                <i class="fas fa-chevron-left left-icon"></i>
+            </div>
+            <div class="slider-buttons">
+                <span class="slider-buttons-items"></span>
+                <span class="slider-buttons-items"></span>
+                <span class="slider-buttons-items"></span>
+                <span class="slider-buttons-items"></span>
+                <span class="slider-buttons-items"></span>
+            </div>
+        </section>
+    </main>
+
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="js/my_library.js"></script>
     <script src="js/main.js"></script>
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-            myForEach(".nav-wrapper nav > ul > .dropdownable a", function (button) {
-                myEvent(button, "click", function (e) {
-                    var parent = e.target.parentElement.parentElement.parentElement;
-                    e.preventDefault();
-                    var isMobile = false;
-                    if (window.innerWidth <= 768) {
-                        isMobile = true;
-                    }
-                    var currentButton = this;
-                    myDropDown(currentButton, (element) => isMobile ? element.nextElementSibling.nextElementSibling : element.nextElementSibling, function (element) {
-                        myToggleClass(element, "active");
-                        myToggleClass(currentButton.querySelector(".menu-line"), "active")
-                    })
-                })
-            })
-
-            myEvent(document.querySelector(".hamburger-menu"), "click", function () {
-                myToggleClass(document.querySelector(".mobile"),"active")
-            })      
-        })    
-    </script>
 </body>
 
 </html>
