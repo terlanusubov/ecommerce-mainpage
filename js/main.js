@@ -17,5 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
     myEvent(document.querySelector(".hamburger-menu"), "click", function () {
         myToggleClass(document.querySelector(".mobile"), "active")
     })
-
 })   

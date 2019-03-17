@@ -32,6 +32,18 @@
         padding: 5px 5px;
     }
 
+    .slider-wrapper .slide-item{
+        padding: 100px 0px;
+    }
+    .slider-wrapper .title h3{
+        font-size: 2em;
+    }
+    .slider-wrapper .right-icon{
+        right: 3%;
+    }
+    .slider-wrapper .left-icon{
+        left:3%;
+    }
 }
 @media screen and (max-width:1200px){
     .header-bottom .logo.header-bottom-item h1 a{
@@ -56,6 +68,15 @@
 @media screen and (max-width:768px){
     .header-bottom .logo.header-bottom-item{
         justify-content: center!important;
+    }
+    .slider-wrapper .slide-item{
+        padding: 60px 0px;
+    }
+    .slider-wrapper .title h3{
+        font-size: 1.6em;
+    }
+    .slider-wrapper .text p{
+        font-size: 0.9em;
     }
     
     .header-bottom .social.header-bottom-item{

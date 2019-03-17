@@ -232,6 +232,9 @@ ul{
 .menu-line.active{
     left:0;
 }
+.navigation.mobile{
+    z-index:100;
+}
 /* Basket */
 .basket-wrapper .basket{
     width: 100%;
