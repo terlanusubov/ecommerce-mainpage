@@ -1,5 +1,6 @@
 # Alzheimer_E_Commerce
-Front End Template (E-commerce)
+
+E-COMMERCE ONLINE SHOPING APP
 
 
 ### This is Self Learning Project 
