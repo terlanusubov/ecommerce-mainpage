@@ -432,3 +432,31 @@ ul{
     transition:all 0.3s ease-in-out;
    opacity: 1;
 }
+
+/* Slider End */
+
+/* Fall A Head */
+.fall_a_head_item-wrapper{
+    padding: 20px;
+}
+.fall_a_head_item {
+    height: 300px;
+}
+.fall_a_head_item .img-wrapper{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.fall_a_head_item .img-wrapper img{
+    height: 100%;
+    width:calc(100% + 10%);
+    top:0;
+    left:-10%;
+    position: absolute;
+    transition:all 0.2s ease-in-out;
+}
+.fall_a_head_item .img-wrapper img:hover{
+    transition:all 0.2s ease-in-out;
+    left:0;
+}
