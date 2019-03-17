@@ -40,9 +40,14 @@
     }
     .slider-wrapper .right-icon{
         right: 3%;
+        font-size: 1.7em;
     }
     .slider-wrapper .left-icon{
         left:3%;
+        font-size: 1.7em;
+    }
+    .slider-button-wrapper{
+        margin-top:15px;
     }
 }
 @media screen and (max-width:1200px){
@@ -64,6 +69,7 @@
          width: 30%;
          padding: 10px 0px;
      }
+     
 }
 @media screen and (max-width:768px){
     .header-bottom .logo.header-bottom-item{
@@ -76,7 +82,7 @@
         font-size: 1.6em;
     }
     .slider-wrapper .text p{
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
     
     .header-bottom .social.header-bottom-item{

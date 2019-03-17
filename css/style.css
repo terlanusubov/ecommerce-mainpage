@@ -408,3 +408,27 @@ ul{
 .slider-wrapper .right-icon{
     right:10%;
 }
+.slider-wrapper .gradient{
+    width:15%;
+    height:100%;
+    position: absolute;
+    transition:all 0.3s ease-in-out;
+    top:0;
+    opacity: .5;
+}
+.gradient.left{
+    left:0;
+    background-image:linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.gradient.left:hover{
+   opacity: 1;
+   transition: all 0.3s ease-in-out;
+}
+.gradient.right{
+    right: 0;
+    background-image:linear-gradient(to left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.gradient.right:hover{
+    transition:all 0.3s ease-in-out;
+   opacity: 1;
+}
