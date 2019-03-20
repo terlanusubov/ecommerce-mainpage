@@ -135,6 +135,23 @@
     .hamburger-menu{
         display: inline-block;
     }
+
+    .arrival-name{
+        display: none;
+    }
+    .arrival-product-item.active{
+        overflow: hidden;
+        max-height: 2000px;
+        transition: all 0.5s ease-in-out;
+    }
+    .arrival-product-item{
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    .arrival-name-mobile{
+        display: block;
+    }
     
 /* Mobile nav */
 .mobile{

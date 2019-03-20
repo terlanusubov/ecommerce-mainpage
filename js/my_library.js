@@ -43,3 +43,9 @@ function myHasClass(selector,className){
     }
 }
 
+function myRemoveClassFromAll(selector,className){
+    myForEach(selector,function(e){
+      myRemoveClass(e,className);
+    })
+}
+

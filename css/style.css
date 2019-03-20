@@ -20,6 +20,20 @@ p{
 ul{
     margin:0;
 }
+/* Animations */
+
+@keyframes buttonInEffect{
+    from{ 
+        border:0px solid #fff;
+        outline:0px solid #17c3a2;
+    }
+
+    to{
+        border:4px solid #fff;
+        outline:4px solid #17c3a2;
+    }
+}
+/* End Animations */
 /* My Custom Classes */
 .height{
     height: 100%;
@@ -629,4 +643,172 @@ section.fall_a_head{
     bottom:0;
     left:0;
     transition: all 0.5s ease-in-out;
+}
+
+
+
+/* End Flat */
+
+/* Start Arrivals */
+.arrival-name-item{
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+}
+.arrival-name-item.active{
+    background:#fc636b;
+}
+.arrival-name-item h5{
+    color:#2A2B2F;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.arrival-name-item .triangle{
+    position: absolute;
+    display: none;
+    bottom: -18%;
+    left:50%;
+    transform: translateX(-50%);
+    border-top: 10px solid #fc636b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.arrival-name-item.active .triangle{
+    display: block;
+}
+.product-content{
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+    padding-bottom: 10px;
+    position: relative;
+}
+.product-wrapper{
+    padding:10px;
+}
+.product-img-wrapper:hover .product-flat-effect{
+    opacity: 1;
+    top: 80%;
+    transition: all 0.4s ease-in-out;
+
+}
+.product-img-wrapper{
+    text-align: center;
+    position: relative;
+    padding:30px 10px;
+}
+.product-img-wrapper:hover .front{
+    transform:  rotateY(180deg);
+    transition: all 0.5s ease-in-out;
+}
+.product-wrapper .front{
+    transition: all 0.5s ease-in-out;
+}
+.product-img-wrapper img{
+    width: 70%;
+    height: 70%;
+}
+.product-name{
+    text-align: center;
+}
+.product-name a{
+    color:#fc636b;
+    font-size: 1em;   
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.product-price{
+    text-align: center;
+    margin-top: 5px;
+}
+.product-price span{
+    color:#000;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+.product-add-button{
+    text-align: center;
+    margin:10px auto;
+    position: relative;
+    width:70%;
+    cursor: pointer;
+}
+.product-add-button::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    border: #2fdab8 solid 4px;
+    transition: all 0.3s ease-in-out;
+}
+.product-add-button:hover:before{
+    opacity: 1;
+    top:-8px;
+    left:-8px;
+    right:-8px;
+    bottom:-8px;
+    transition: all 0.3s ease-in-out;
+}
+.product-add-button .add-button{
+    text-transform: uppercase;
+    border:none;
+    outline: none;  
+    color:#fff;
+    background: #17c3a2;
+    width:100%;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.arrival-name-mobile{
+   position: relative;
+   display: none;
+   padding: 10px;
+   border:1px solid #000;
+   color:#000;
+}
+.arrival-name-mobile i{
+    font-size:1.2em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:2%;
+    color:#000;
+}
+.product-title{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 60px;
+    height: 30px;
+    background: #fc636b;
+    color:#fff;
+    font-size: 1em;
+    z-index:100;
+    display: inline-block;
+}
+.product-flat-effect{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 15%;
+    background: #000;
+    opacity: 0;
+    z-index:10000;
+    text-align: center;
+    color:#fff;
+    transition: all 0.4s ease-in-out;
+    
+}
+.product-flat-effect h3{
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding-top: 10px;
 }
