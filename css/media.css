@@ -97,7 +97,9 @@
          width: 30%;
          padding: 10px 0px;
      }
-     
+     /* .discount-button{
+         width:20%;
+     } */
 }
 @media screen and (max-width:768px){
     .header-bottom .logo.header-bottom-item{
@@ -152,7 +154,30 @@
     .arrival-name-mobile{
         display: block;
     }
-    
+    .discount-button{
+        width:150px;
+    }
+    .discount{
+        padding: 50px 20px;
+    }
+    .discount-title h2{
+        font-size: 1.8em;
+    }
+    .contact-title{
+        justify-content: center;
+    }
+    .footer .contact .contact-title h2{
+        font-size: 1.1em;
+    }
+    .contact-input{
+        text-align: center;
+    }
+    .footer .contact-email{
+        width:80%;
+    }
+    .footer-item{
+        padding: 0px;
+    }
 /* Mobile nav */
 .mobile{
     max-height:0px;
