@@ -15,14 +15,6 @@ E-COMMERCE ONLINE SHOPING APP
 </ul>
 </li>
 
-<li>Back-End
-<ul>
-<li>C#</li>
-<li>ASP.NET MVC</li>
-<li>T-SQL</li>
-</ul>
-
-
 </ul>
 
 
