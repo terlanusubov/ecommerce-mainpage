@@ -1,22 +1,3 @@
-# Alzheimer_E_Commerce
+# E-Commerce main page template with HTML/CSS/JS
 
-E-COMMERCE ONLINE SHOPING APP
-
-
-### This is Self Learning Project 
-
-## I used 
-<ul>
-<li>Front-End
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JAVASCRIPT</li>
-</ul>
-</li>
-
-</ul>
-
-
-
-## You can download and use my project absolutely free :)
+this is a simple, responsive e-commerce main page template that has written with HTML/CSS/JS 
